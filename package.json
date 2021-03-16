@@ -1,0 +1,16 @@
+{
+  "name": "lb-utils",
+  "version": "1.0.0",
+  "description": "utility functions that could be used in lebanese apps",
+  "main": "index.js",
+  "author": "Ghamza-Jd",
+  "license": "MIT",
+  "scripts": {
+    "test": "mocha ./__tests__/**/*.test.js",
+    "coverage": "nyc --report=text --reporter=text --branches=80 --functions=80 --lines=80 --statements=80 --check-coverage=true yarn test"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^8.3.2"
+  }
+}
