@@ -1,6 +1,6 @@
 {
   "name": "lebanon-utils",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "utility functions that could be used in lebanese apps",
   "main": "index.js",
   "author": "hamzajd",
