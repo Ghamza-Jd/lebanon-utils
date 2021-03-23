@@ -1,6 +1,5 @@
-// under dev
-
 const isValid = require("./isValid");
+const formatter = require("../helpers/lebonumberGrammar");
 
 function formatPhoneNumber(number, formatExpression) {
   /**
@@ -12,13 +11,8 @@ function formatPhoneNumber(number, formatExpression) {
    * * /223: rest of the digits
    * d: digit
    */
-  const pattern = /^(i|I|R)?r?([0-9]*|\*)$/;
-  if (!pattern.test(formatExpression))
-    throw new Error("Incorrect format expression");
   if (!isValid(number)) throw new Error("Invalid phone number");
-
-  for (let i = 0; i < number.length; i++) {}
-  return pattern.test(formatExpression);
+  return formatter(number.substr(number.length - 7), formatExpression);
 }
 
 // ik* -> +96103654321
@@ -29,4 +23,4 @@ function formatPhoneNumber(number, formatExpression) {
 // ik */233 -> +961 03 654 321
 // ik*/233 -> +96103 654 321
 
-// module.exports = formatPhoneNumber;
+module.exports = formatPhoneNumber;
